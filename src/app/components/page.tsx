@@ -49,6 +49,7 @@ export default function ComponentPage() {
             Back to Home
           </ArrowLink>
 
+
           <div className='mt-8 flex flex-wrap gap-2'>
             <Button
               onClick={toggleMode}
@@ -59,7 +60,14 @@ export default function ComponentPage() {
             {/* <Button onClick={randomize}>Randomize CSS Variable</Button> */}
           </div>
 
-          
+          <div className="flex gap-4">
+            <button className='bg-deepPurple-500 text-white rounded py-3 px-6 mt-12'>Click Here</button>
+            <button className='bg-deepGreen-500 text-white rounded py-3 px-6 mt-12'>Click Here</button>
+            <button className='bg-goldenYellow-500 text-white rounded py-3 px-6 mt-12'>Click Here</button>
+            <button className='bg-darkRed-500 text-white rounded py-3 px-6 mt-12'>Click Here</button>
+            <button className='bg-gray-500 text-white rounded py-3 px-6 mt-12'>Click Here</button>
+          </div>
+
 
           <ol className='mt-8 space-y-6'>
             <li className='space-y-2'>
