@@ -1,13 +1,7 @@
 'use client';
 
-import Head from 'next/head';
 import * as React from 'react';
 import '@/lib/env';
-
-import ArrowLink from '@/components/links/ArrowLink';
-import ButtonLink from '@/components/links/ButtonLink';
-import UnderlineLink from '@/components/links/UnderlineLink';
-import UnstyledLink from '@/components/links/UnstyledLink';
 
 /**
  * SVGR Support
@@ -16,57 +10,72 @@ import UnstyledLink from '@/components/links/UnstyledLink';
  * You can override the next-env if the type is important to you
  * @see https://stackoverflow.com/questions/68103844/how-to-override-next-js-svg-module-declaration
  */
-import Logo from '~/svg/Logo.svg';
+import Footer from '@/components/Footer';
 
 // !STARTERCONF -> Select !STARTERCONF and CMD + SHIFT + F
 // Before you begin editing, follow all comments with `STARTERCONF`,
 // to customize the default configuration.
 
 export default function HomePage() {
+  const [textColorClass, setDataForTextColor] = React.useState(String);
+  const [backgroundColorClass, setDataForBGColor] = React.useState(String);
+
+
+  const handleBGColor = async (className: any) => {
+    console.log("bg color", className);
+    setDataForBGColor(className);
+  };
+
+  const handleTextColor = async (className: string) => {
+    console.log("text color", className);
+    setDataForTextColor(className);
+  };
   return (
     <main>
-      <Head>
-        <title>Hi</title>
-      </Head>
-      <section className='bg-white'>
-        <div className='layout relative flex min-h-screen flex-col items-center justify-center py-12 text-center'>
-          <Logo className='w-16' />
-          <h1 className='mt-4'>Next.js + Tailwind CSS + TypeScript Starter</h1>
-          <p className='mt-2 text-sm text-gray-800'>
-            A starter for Next.js, Tailwind CSS, and TypeScript with Absolute
-            Import, Seo, Link component, pre-configured with Husky{' '}
+
+      <section className="">
+        <div className="container mx-auto mt-5 flex gap-3 justify-center">
+          <label htmlFor="bg-color">Choose a BG color:</label>
+          <select name="bg-color" onChange={(e) => {
+            handleBGColor(e.target.value);
+          }} className="border-primary-50 border-[1px] focus-visible:border-primary-50">
+            <option value="bg-primary-0" >Primary-0</option>
+            <option value="bg-primary-10">Primary-10</option>
+            <option value="bg-primary-20">Primary-20</option>
+            <option value="bg-primary-30">Primary-30</option>
+            <option value="bg-primary-40">Primary-40</option>
+            <option value="bg-primary-50">Primary-50</option>
+            <option value="bg-primary-60">Primary-60</option>
+            <option value="bg-primary-70">Primary-70</option>
+            <option value="bg-primary-80">Primary-80</option>
+            <option value="bg-primary-90">Primary-90</option>
+            <option value="bg-primary-100">Primary-100</option>
+          </select>
+          <label htmlFor="text-color">Choose a Text color:</label>
+          <select name="text-color"
+            onChange={(e) => {
+              handleTextColor(e.target.value);
+            }} className="border-primary-50 border-[1px] focus-visible:border-primary-50">
+            <option value="text-primary-0" >Primary-0</option>
+            <option value="text-primary-10">Primary-10</option>
+            <option value="text-primary-20">Primary-20</option>
+            <option value="text-primary-30">Primary-30</option>
+            <option value="text-primary-40">Primary-40</option>
+            <option value="text-primary-50">Primary-50</option>
+            <option value="text-primary-60">Primary-60</option>
+            <option value="text-primary-70">Primary-70</option>
+            <option value="text-primary-80">Primary-80</option>
+            <option value="text-primary-90">Primary-90</option>
+            <option value="text-primary-100">Primary-100</option>
+          </select>
+        </div>
+        <div className={`container mx-auto mt-5 p-4 border-[1px] my-28 ${backgroundColorClass}`}>
+          <p className={textColorClass}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porta odio vitae leo varius maximus. Nullam interdum tortor eu elit efficitur aliquam. Praesent mattis dolor quis blandit egestas. Sed aliquam pharetra dapibus. Nam ornare semper libero quis viverra. Praesent arcu est, posuere eu lobortis et, posuere a quam. Suspendisse ut euismod augue, non iaculis mi. Aliquam at eros malesuada, viverra nunc ut, lacinia tellus.
           </p>
-          <p className='mt-2 text-sm text-gray-700'>
-            <ArrowLink href='https://github.com/theodorusclarence/ts-nextjs-tailwind-starter'>
-              See the repository
-            </ArrowLink>
-          </p>
-
-          <ButtonLink className='mt-6' href='/components' variant='light'>
-            See all components
-          </ButtonLink>
-
-          <UnstyledLink
-            href='https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Ftheodorusclarence%2Fts-nextjs-tailwind-starter'
-            className='mt-4'
-          >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              width='92'
-              height='32'
-              src='https://vercel.com/button'
-              alt='Deploy with Vercel'
-            />
-          </UnstyledLink>
-
-          <footer className='absolute bottom-2 text-gray-700'>
-            © {new Date().getFullYear()} By{' '}
-            <UnderlineLink href='https://theodorusclarence.com?ref=tsnextstarter'>
-              Theodorus Clarence
-            </UnderlineLink>
-          </footer>
         </div>
       </section>
+      <Footer />
     </main>
   );
 }
