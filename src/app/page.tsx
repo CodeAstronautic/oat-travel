@@ -76,17 +76,20 @@ export default function HomePage() {
         </div>
 
         <div className='py-12 mx-20'>
-          <h1 className='text-large'>This is Display L</h1>
-          <h1 className='text-medium'>This is Display M</h1>
-          <h1 className='text-small'>This is Display S</h1>
-          <h1 className='text-header-large'>This is Header L</h1>
-          <h1 className='text-header-medium'>This is Header S</h1>
-          <h1 className='text-header-small'>This is Header S</h1>
-          <h1 className='text-header-xs'>This is Header XS</h1>
-          <p className='text-body-large xl'>This is Body L</p>
-          <p className='text-body-medium large'>This is Body M</p>
-          <p className='text-body-small medium'>This is Body S</p>
-          <p className='text-body-xs small'>This is Body XS</p>
+          <h1 className='large'>This is Display L</h1>
+          <h1 className='medium'>This is Display M</h1>
+          <h1 className='small'>This is Display S</h1>
+          <h2>This is Header L</h2>
+          <h3>This is Header S</h3>
+          <h4>This is Header S</h4>
+          <h5>This is Header XS</h5>
+          <p className='xl'>This is Body XL</p>
+          <p className='xl-150'>This is Body XL-150</p>
+          <p className='large'>This is Body M</p>
+          <p className='large-150'>This is Body M-150</p>
+          <p className='medium'>This is Body S</p>
+          <p className='medium-150'>This is Body S-150</p>
+          <p className='small'>This is Body S</p>
         </div>
       </section >
       <Footer />

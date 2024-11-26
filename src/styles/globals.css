@@ -77,24 +77,30 @@
     @apply font-primary text-3xl font-bold md:text-5xl;
   }
 
-  h1,
-  .h1 {
-    @apply font-primary text-2xl font-bold md:text-4xl;
+  h1 {
+    @apply font-bold;
+    font-size: 2.75rem;
+    line-height: 3.4rem
   }
 
-  h2,
-  .h2 {
-    @apply font-primary text-xl font-bold md:text-3xl;
+  h2 {
+    @apply font-bold;
+    font-size: 2.25rem;
+    line-height: 2.813rem;
   }
 
-  h3,
-  .h3 {
-    @apply font-primary text-lg font-bold md:text-2xl;
+  h3 {
+    @apply font-bold;
+    font-size: 1.75rem;
+    line-height: 2.363rem;
+
   }
 
-  h4,
-  .h4 {
-    @apply font-primary text-base font-bold md:text-lg;
+  h4 {
+    @apply font-bold;
+    font-size: 1.5rem;
+    line-height: 2.025rem;
+
   }
 
   body {
@@ -273,15 +279,60 @@
   }
 }
 
-p.xl,
-p.large,
-p.medium,
-p.small {
+p.xl {
   line-height: 1.2rem;
+  font-size: 1.125rem;
 }
 
-p.xl-150,
-p.large-150,
+p.xl-150 {
+  line-height: 1.5rem;
+  font-size: 1.125rem;
+}
+
+p.large {
+  line-height: 1.2rem;
+  font-size: 1rem;
+}
+
+
+p.large-150 {
+  line-height: 1.5rem;
+  font-size: 1rem;
+}
+
+
+p.medium {
+  line-height: 1.2rem;
+  font-size: 0.875rem;
+}
+
 p.medium-150 {
   line-height: 1.5rem;
+  font-size: 0.875rem;
+}
+
+
+p.small {
+  line-height: 1.2rem;
+  font-size: 12px;
+}
+
+
+
+
+
+h1.large {
+  font-size: 4rem;
+  line-height: 5rem
+}
+
+h1.medium {
+  font-size: 3.25rem;
+  line-height: 4.06rem
+}
+
+
+h1.small {
+  font-size: 2.75rem;
+  line-height: 3.438rem;
 }
