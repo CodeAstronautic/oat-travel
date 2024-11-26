@@ -25,18 +25,17 @@
   --color-primary-800: rgb(var(--tw-color-primary-800));
   --color-primary-900: rgb(var(--tw-color-primary-900));
 
-  --primary-color-0: #F5FCFF;
-  --primary-color-10: #E3F7FE;
-  --primary-color-20: #C8ECF8;
-  --primary-color-30: #B6E4F4;
-  --primary-color-40: #86CBE2;
-  --primary-color-50: #017EA8;
-  --primary-color-60: #01698C;
-  --primary-color-70: #015470;
-  --primary-color-80: #013F54;
-  --primary-color-90: #002A38;
-  --primary-color-100: #001922;
-
+  --primary-color-0: #F5F5F5;
+  --primary-color-10: #EDEDED;
+  --primary-color-20: #D2D2D2;
+  --primary-color-30: #AAAAAA;
+  --primary-color-40: #808080;
+  --primary-color-50: #666666;
+  --primary-color-60: #555555;
+  --primary-color-70: #444444;
+  --primary-color-80: #333333;
+  --primary-color-90: #222222;
+  --primary-color-100: #111111;
 }
 
 @layer base {
