@@ -97,9 +97,15 @@
     @apply font-primary text-base font-bold md:text-lg;
   }
 
-  body,
-  .p {
+  body {
     @apply font-primary text-sm md:text-base;
+  }
+
+  p {
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    @apply font-primary text-primary-80;
   }
 }
 
@@ -257,12 +263,25 @@
   }
 }
 
-.footerMain{
+.footerMain {
   display: none;
 }
 
 @media (min-width : 1024px) {
-  .footerMain{
+  .footerMain {
     display: flex !important;
   }
+}
+
+p.xl,
+p.large,
+p.medium,
+p.small {
+  line-height: 1.2rem;
+}
+
+p.xl-150,
+p.large-150,
+p.medium-150 {
+  line-height: 1.5rem;
 }
