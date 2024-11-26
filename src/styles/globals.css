@@ -256,3 +256,13 @@
     line-height: 150%;
   }
 }
+
+.footerMain{
+  display: none;
+}
+
+@media (min-width : 1024px) {
+  .footerMain{
+    display: flex !important;
+  }
+}

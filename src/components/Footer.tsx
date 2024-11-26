@@ -1,94 +1,113 @@
-// import React from 'react'
-// eslint-disable-next-line simple-import-sort/imports
+
 import Image from 'next/image'
 
-import Business from "../../public/images/BusinessLogo.png"
-import Ustoa from "../../public/images/USTOA.png"
-import textLogo from "../../public/images/textlogo.png"
-import Facebook from "../../public/svg/facebook.svg"
-import Instagram from "../../public/svg/instagram.svg"
-import Linkedin from "../../public/svg/linkedin.svg"
-import Phone from "../../public/svg/phone.svg"
+import Facebook from "@/assets/svg/facebook.svg"
+import Instagram from "@/assets/svg/instagram.svg"
+import Linkedin from "@/assets/svg/linkedin.svg"
+import Phone from "@/assets/svg/phone.svg"
 import Accordion from './Accordian'
 
 const Footer = () => {
+  const footerLinks = [
+    {
+      heading: "Land Adventures",
+      links: [
+        { name: "Africa & the Middle East", link: "#" },
+        { name: "Asia", link: "#" },
+        { name: "Central & South America", link: "#" },
+        { name: "Europe", link: "#" },
+        { name: "South Pacific", link: "#" }
+      ]
+    },
+    {
+      heading: "Small Ship Adventures",
+      links: [
+        { name: "Antarctica & the Arctic", link: "#" },
+        { name: "Middle East", link: "#" },
+        { name: "Italy & Mediterranean", link: "#" },
+        { name: "Scandinavia & The British Isles", link: "#" },
+        { name: "South America", link: "#" }
+      ]
+    },
+    {
+      heading: "O.A.T. Advantage",
+      links: [
+        { name: "Solo Friendly Travel", link: "#" },
+        { name: "NEW O.A.T. Travelflix", link: "#" },
+        { name: "Best Price Guarantee", link: "#" },
+        { name: "Refer and Earn", link: "#" },
+        { name: "Private Groups", link: "#" },
+        { name: "Special Offers", link: "#" },
+        { name: "Sir Edmund Hillary Club", link: "#" },
+        { name: "Grand Circle Foundation", link: "#" },
+        { name: "Travel Protection Plan", link: "#" }
+      ]
+    },
+    {
+      heading: "Contact Us",
+      links: [
+        { name: "People & Culture", link: "#" },
+        { name: "Reservations & Customer Service", link: "#" },
+        { name: "Frequently Asked Questions", link: "#" },
+        { name: "About Us", link: "#" },
+        { name: "Media Inquiries", link: "#" },
+        { name: "Traveler Photo Contest", link: "#" },
+        { name: "Career Opportunities", link: "#" }
+      ]
+    }
+  ];
+  const textLogo = "https://grandcircle.scene7.com/is/image/GrandCircle/footer_image_logo_oat?&scl=1&fmt=png-alpha"
+  const Business = "https://grandcircle.scene7.com/is/image/GrandCircle/footer_image_bbb_oat?&scl=1&fmt=png-alpha"
+  const Ustoa = "https://grandcircle.scene7.com/is/image/GrandCircle/footer_image_ustoa_oat?&scl=1&fmt=png-alpha"
   return (
     <div className='text-white'>
-      <div className=' bg-[#212217] px-20 py-8'>
-        <div className="sm:hidden md:hidden lg:flex justify-center gap-x-16">
-          <div>
-            <h1 className='text-body-1 font-bold'>Land Adventures</h1>
-            <ul className='mt-2 font-regular'>
-              <li className='font-regular my-2'>Africa & the Middle East</li>
-              <li className='font-regular my-2'>Asia</li>
-              <li className='font-regular my-2'>Central  & South America</li>
-              <li className='font-regular my-2'>Europe</li>
-              <li className='font-regular my-2'>South Pacific</li>
-            </ul>
-          </div>
-          <div>
-            <h1 className='text-body-1 font-bold'>Small Ship Adventures</h1>
-            <ul className='mt-2 font-regular'>
-              <li className='font-regular my-2'>Antarctica & the Arctic</li>
-              <li className='font-regular my-2'>Middle East</li>
-              <li className='font-regular my-2'>Italy & Mediterranean</li>
-              <li className='font-regular my-2'>Scandinavia & The British Isles</li>
-              <li className='font-regular my-2'>South America</li>
-            </ul>
-          </div>
-          <div>
-            <h1 className='text-body-1 font-bold'>O.A.T. Advantage</h1>
-            <ul className='mt-2 font-regular'>
-              <li className='font-regular my-2'>Solo Friendly Travel</li>
-              <li className='font-regular my-2'>NEW O.A.T. Travelflix</li>
-              <li className='font-regular my-2'>Best Price Guarantee</li>
-              <li className='font-regular my-2'>Refer and Earn</li>
-              <li className='font-regular my-2'>Private Groups</li>
-              <li className='font-regular my-2'>Special Offers</li>
-              <li className='font-regular my-2'>Sir Edmund Hillary Club</li>
-              <li className='font-regular my-2'>Grand Circle Foundation</li>
-              <li className='font-regular my-2'>Travel Protection Plan</li>
-            </ul>
-          </div>
-          <div>
-            <h1 className='text-body-1 font-bold'>Contact Us</h1>
-            <ul className='mt-2 font-regular'>
-              <li className='font-regular my-2'>People & Culture</li>
-              <li className='font-regular my-2'>Reservations & Customer Service</li>
-              <li className='font-regular my-2'>Frequently Asked Questions</li>
-              <li className='font-regular my-2'>About Us</li>
-              <li className='font-regular my-2'>Media Inquires</li>
-              <li className='font-regular my-2'>Traveler Photo Contest</li>
-              <li className='font-regular my-2'>Career Opportunities</li>
-            </ul>
-          </div>
+      <div className=' bg-[#212217] px-8 lg:px-20 py-8'>
+        <div className="footerMain justify-center gap-x-16">
+          {footerLinks.map((item, index) => {
+            return (
+              <div key={index}>
+                <h1 className='text-body-1 font-bold'>{item.heading}</h1>
+                <ul className='mt-2 font-regular'>
+                  {item.links.map((data) => {
+                    return (
+                      <li className='font-regular my-2 hover:underline cursor-pointer'>{data.name}</li>
+                    )
+                  })}
+                </ul>
+              </div>
+            )
+          })}
         </div>
         <div className="block lg:hidden">
-          <Accordion title="Land Adventures">
-            <ul>
-              <li>Africa & the Middle East</li>
-              <li>Asia</li>
-              <li>Central & South America</li>
-              <li>Europe</li>
-              <li>South Pacific</li>
-            </ul>
-          </Accordion>
+          {footerLinks.map((item, index) => {
+            return (
+              <Accordion title={item.heading}>
+                <ul className='font-regular'>
+                  {item.links.map((data) => {
+                    return (
+                      <li className='font-regular my-2 hover:underline cursor-pointer'>{data.name}</li>
+                    )
+                  })}
+                </ul>
+              </Accordion>
+            )
+          })}
         </div>
         <div className="mt-12 lg:flex justify-between items-center">
           <div className='flex items-center justify-center lg:justify-start gap-x-8'>
-            <Image src={Business} alt='business' />
-            <Image src={Ustoa} alt='USTOA' />
+            <Image src={Business} alt='business Logo' width={122} height={46} />
+            <Image src={Ustoa} alt='USTOA logo' width={175} height={46} />
           </div>
           <div className='text-body-1 text-center mt-12 lg:mt-0'>
-            <a href="">Terms & Conditions</a> | <a href="">Privacy Policy</a> | <a href="">Terms of Use</a> | <a href="">Medical Issues & Disabilities</a>
+            <a href="" className='hover:underline'>Terms & Conditions</a> | <a href="" className='hover:underline'>Privacy Policy</a> | <a href="" className='hover:underline'>Terms of Use</a> | <a href="" className='hover:underline'>Medical Issues & Disabilities</a>
           </div>
         </div>
       </div>
-      <div className=' bg-[#383826] text-center lg:text-left px-20 py-8 grid grid-cols-1 lg:grid-cols-4'>
+      <div className=' bg-[#383826] text-center lg:text-left px-8 lg:px-20 py-8 grid grid-cols-1 lg:grid-cols-4'>
         <div className='lg:col-span-2 md:order-2 lg:order-first'>
-          <Image src={textLogo} alt='textLogo' className='mx-auto lg:mx-0' />
+          <Image src={textLogo} alt='text Logo' className='mx-auto lg:mx-0' width={274} height={20} />
           <p className='text-body-1 mt-2'> 347 Congress St. • Boston, MA 02210</p>
-          <p className='text-body-1 mt-1'> © 2024 Overseas Adventure Travel </p>
+          <p className='text-body-1 mt-1'> © {new Date().getFullYear()} Overseas Adventure Travel </p>
         </div>
         <div className='lg:flex justify-between lg:col-span-2 mb-8 lg:mb-0'>
           <div className='mb-8 lg:mb-0'>

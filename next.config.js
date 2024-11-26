@@ -8,14 +8,9 @@ const nextConfig = {
   swcMinify: true,
 
   // Uncoment to add domain whitelist
-  // images: {
-  //   remotePatterns: [
-  //     {
-  //       protocol: 'https',
-  //       hostname: 'res.cloudinary.com',
-  //     },
-  //   ]
-  // },
+  images: {
+    domains: ['grandcircle.scene7.com', 'another-allowed-domain.com']
+  },
 
   webpack(config) {
     // Grab the existing rule that handles SVG imports

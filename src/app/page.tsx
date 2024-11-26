@@ -74,8 +74,24 @@ export default function HomePage() {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porta odio vitae leo varius maximus. Nullam interdum tortor eu elit efficitur aliquam. Praesent mattis dolor quis blandit egestas. Sed aliquam pharetra dapibus. Nam ornare semper libero quis viverra. Praesent arcu est, posuere eu lobortis et, posuere a quam. Suspendisse ut euismod augue, non iaculis mi. Aliquam at eros malesuada, viverra nunc ut, lacinia tellus.
           </p>
         </div>
-      </section>
+
+        <div className='py-12 mx-20'>
+          <h1 className='text-display-1'>This is Display L</h1>
+          <h1 className='text-display-2'>This is Display M</h1>
+          <h1 className='text-display-3'>This is Display S</h1>
+          <h1 className='text-header-1'>This is Header L</h1>
+          <h1 className='text-header-2'>This is Header S</h1>
+          <h1 className='text-header-3'>This is Header S</h1>
+          <h1 className='text-header-4'>This is Header XS</h1>
+          <p className='text-body-1'>This is Body L</p>
+          <p className='text-body-2'>This is Body M</p>
+          <p className='text-body-3'>This is Body S</p>
+          <p className='text-body-4'>This is Body XS</p>
+        </div >
+
+
+      </section >
       <Footer />
-    </main>
+    </main >
   );
 }
