@@ -21,13 +21,13 @@ export default function HomePage() {
   const [backgroundColorClass, setDataForBGColor] = React.useState(String);
 
 
-  const handleBGColor = async (className: any) => {
-    console.log("bg color", className);
+  const handleBGColor = async (className: string) => {
+
     setDataForBGColor(className);
   };
 
   const handleTextColor = async (className: string) => {
-    console.log("text color", className);
+
     setDataForTextColor(className);
   };
   return (
