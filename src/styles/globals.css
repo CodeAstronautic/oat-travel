@@ -111,7 +111,7 @@
     font-size: 1.125rem;
     font-style: normal;
     font-weight: 400;
-    @apply font-primary text-primary-80;
+    @apply font-primary;
   }
 }
 
