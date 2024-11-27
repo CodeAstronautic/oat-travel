@@ -1,5 +1,6 @@
 
 import Image from 'next/image'
+import Link from 'next/link'
 
 import Facebook from "@/assets/svg/facebook.svg"
 import Instagram from "@/assets/svg/instagram.svg"
@@ -13,47 +14,47 @@ const Footer = () => {
     {
       heading: "Land Adventures",
       links: [
-        { name: "Africa & the Middle East", link: "#" },
-        { name: "Asia", link: "#" },
-        { name: "Central & South America", link: "#" },
-        { name: "Europe", link: "#" },
-        { name: "South Pacific", link: "#" }
+        { name: "Africa & the Middle East", link: "/" },
+        { name: "Asia", link: "/" },
+        { name: "Central & South America", link: "/" },
+        { name: "Europe", link: "/" },
+        { name: "South Pacific", link: "/" }
       ]
     },
     {
       heading: "Small Ship Adventures",
       links: [
-        { name: "Antarctica & the Arctic", link: "#" },
-        { name: "Middle East", link: "#" },
-        { name: "Italy & Mediterranean", link: "#" },
-        { name: "Scandinavia & The British Isles", link: "#" },
-        { name: "South America", link: "#" }
+        { name: "Antarctica & the Arctic", link: "/" },
+        { name: "Middle East", link: "/" },
+        { name: "Italy & Mediterranean", link: "/" },
+        { name: "Scandinavia & The British Isles", link: "/" },
+        { name: "South America", link: "/" }
       ]
     },
     {
       heading: "O.A.T. Advantage",
       links: [
-        { name: "Solo Friendly Travel", link: "#" },
-        { name: "NEW O.A.T. Travelflix", link: "#" },
-        { name: "Best Price Guarantee", link: "#" },
-        { name: "Refer and Earn", link: "#" },
-        { name: "Private Groups", link: "#" },
-        { name: "Special Offers", link: "#" },
-        { name: "Sir Edmund Hillary Club", link: "#" },
-        { name: "Grand Circle Foundation", link: "#" },
-        { name: "Travel Protection Plan", link: "#" }
+        { name: "Solo Friendly Travel", link: "/" },
+        { name: "NEW O.A.T. Travelflix", link: "/" },
+        { name: "Best Price Guarantee", link: "/" },
+        { name: "Refer and Earn", link: "/" },
+        { name: "Private Groups", link: "/" },
+        { name: "Special Offers", link: "/" },
+        { name: "Sir Edmund Hillary Club", link: "/" },
+        { name: "Grand Circle Foundation", link: "/" },
+        { name: "Travel Protection Plan", link: "/" }
       ]
     },
     {
       heading: "Contact Us",
       links: [
-        { name: "People & Culture", link: "#" },
-        { name: "Reservations & Customer Service", link: "#" },
-        { name: "Frequently Asked Questions", link: "#" },
-        { name: "About Us", link: "#" },
-        { name: "Media Inquiries", link: "#" },
-        { name: "Traveler Photo Contest", link: "#" },
-        { name: "Career Opportunities", link: "#" }
+        { name: "People & Culture", link: "/" },
+        { name: "Reservations & Customer Service", link: "/" },
+        { name: "Frequently Asked Questions", link: "/" },
+        { name: "About Us", link: "/" },
+        { name: "Media Inquiries", link: "/" },
+        { name: "Traveler Photo Contest", link: "/" },
+        { name: "Career Opportunities", link: "/" }
       ]
     }
   ];
@@ -71,7 +72,7 @@ const Footer = () => {
                 <ul className='mt-2 font-regular'>
                   {item.links.map((data, index) => {
                     return (
-                      <li className='font-regular my-2 hover:underline cursor-pointer' key={index}>{data.name}</li>
+                      <li className='font-regular my-2 hover:underline cursor-pointer' key={index}><a href={data.link}>{data.name}</a></li>
                     )
                   })}
                 </ul>
@@ -86,7 +87,7 @@ const Footer = () => {
                 <ul className='font-regular'>
                   {item.links.map((data, index) => {
                     return (
-                      <li className='font-regular my-2 hover:underline cursor-pointer' key={index}>{data.name}</li>
+                      <li className='font-regular my-2 hover:underline cursor-pointer' key={index}><a href={data.link}>{data.name}</a></li>
                     )
                   })}
                 </ul>
@@ -96,8 +97,12 @@ const Footer = () => {
         </div>
         <div className="mt-12 lg:flex justify-between items-center">
           <div className='flex items-center justify-center lg:justify-start gap-x-8'>
-            <Image src={Business} alt='business Logo' width={122} height={46} />
-            <Image src={Ustoa} alt='USTOA logo' width={175} height={46} />
+            <Link href="/" target='_blank'>
+              <Image src={Business} alt='business Logo' width={122} height={46} />
+            </Link>
+            <Link href="/" target='_blank'>
+              <Image src={Ustoa} alt='USTOA logo' width={175} height={46} />
+            </Link>
           </div>
           <div className='text-body-large text-center mt-12 lg:mt-0'>
             <a href="" className='hover:underline'>Terms & Conditions</a> | <a href="" className='hover:underline'>Privacy Policy</a> | <a href="" className='hover:underline'>Terms of Use</a> | <a href="" className='hover:underline'>Medical Issues & Disabilities</a>
@@ -105,8 +110,10 @@ const Footer = () => {
         </div>
       </div>
       <div className=' bg-[#383826] text-center lg:text-left px-8 lg:px-20 py-8 grid grid-cols-1 lg:grid-cols-4'>
-        <div className='lg:col-span-2 md:order-2 lg:order-first text-white'>
-          <Image src={textLogo} alt='text Logo' className='mx-auto lg:mx-0' width={274} height={20} />
+        <div className='lg:col-span-2 order-2 lg:order-first text-white'>
+          <Link href="/">
+            <Image src={textLogo} alt='text Logo' className='mx-auto lg:mx-0' width={274} height={20} />
+          </Link>
           <p className='text-body-large mt-2'> 347 Congress St. • Boston, MA 02210</p>
           <p className='text-body-large mt-1'> © {new Date().getFullYear()} Overseas Adventure Travel </p>
         </div>
